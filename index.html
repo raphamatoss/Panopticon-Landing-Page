@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Panopticon — Chamada facial, por GPS ou manual</title>
+  <meta name="description" content="Panopticon: sistema de controle de frequência por reconhecimento facial, geolocalização ou chamada manual para instituições de ensino.">
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=7">
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="top">
+    <div class="container nav__inner">
+      <a href="#top" class="nav__brand" aria-label="Panopticon">
+        <img src="assets/logo.png" alt="Panopticon" class="nav__logo">
+      </a>
+      <nav class="nav__links" aria-label="Seções">
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#recursos">Recursos</a>
+        <a href="#perfis">Perfis</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <a href="https://github.com/DCOMP-UFS/praticas.reconhece-face" class="btn btn--ghost btn--sm" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="container hero__inner">
+      <div class="hero__copy">
+        <span class="eyebrow">3 formas de fazer a chamada</span>
+        <h1>Registro de presença com visão e inovação <span class="accent">na palma de sua mão</span>.</h1>
+        <p class="lead">
+          Uma ou mais fotos da sala e o reconhecimento facial identifica os alunos presentes. Um toque
+          no celular e o aluno confirma presença pelo GPS. Ou, se preferir, o professor
+          faz a chamada manualmente. Sem lista de papel, sem perder tempo de aula.
+        </p>
+        <div class="hero__ctas">
+          <a href="#como-funciona" class="btn btn--primary">Ver como funciona</a>
+          <a href="#recursos" class="btn btn--ghost">Recursos</a>
+        </div>
+      </div>
+
+      <!-- Phone mockup with animated face detection -->
+      <div class="hero__visual" aria-hidden="true">
+        <div class="phone">
+          <div class="phone__notch"></div>
+          <div class="phone__screen">
+            <div class="phone__bar">
+              <span>Chamada · Cálculo I</span>
+              <span class="live"><i></i>Ao vivo</span>
+            </div>
+            <div class="scene">
+              <svg viewBox="0 0 300 260" class="scene__svg">
+                <!-- back row -->
+                <g class="person"><circle cx="55" cy="70" r="20"/><rect x="28" y="94" width="54" height="60" rx="22"/></g>
+                <g class="person"><circle cx="150" cy="62" r="20"/><rect x="123" y="86" width="54" height="60" rx="22"/></g>
+                <g class="person"><circle cx="245" cy="70" r="20"/><rect x="218" y="94" width="54" height="60" rx="22"/></g>
+                <!-- front row -->
+                <g class="person person--front"><circle cx="100" cy="150" r="24"/><rect x="68" y="178" width="64" height="90" rx="26"/></g>
+                <g class="person person--front"><circle cx="200" cy="150" r="24"/><rect x="168" y="178" width="64" height="90" rx="26"/></g>
+                <!-- desks -->
+                <rect x="0" y="232" width="300" height="28" class="desk"/>
+              </svg>
+              <div class="box" style="--x:10%;--y:17.3%;--s:16.7%;--d:.2s"><b>Ana</b></div>
+              <div class="box" style="--x:41.7%;--y:14.2%;--s:16.7%;--d:.6s"><b>Bruno</b></div>
+              <div class="box" style="--x:73.3%;--y:17.3%;--s:16.7%;--d:1s"><b>Carla</b></div>
+              <div class="box" style="--x:23.7%;--y:46.5%;--s:19.3%;--d:1.4s"><b>Diego</b></div>
+              <div class="box" style="--x:57%;--y:46.5%;--s:19.3%;--d:1.8s"><b>Elisa</b></div>
+              <div class="scanline"></div>
+            </div>
+            <div class="phone__result">
+              <div class="result__count"><strong data-count="5">0</strong> / 5 presentes</div>
+              <div class="result__bar"><span></span></div>
+            </div>
+          </div>
+        </div>
+        <div class="float-card float-card--gps">
+          <span class="dot dot--blue"></span>
+          <div><strong>Presença via GPS</strong><small>dentro do raio da sala · 42 m</small></div>
+        </div>
+        <div class="float-card float-card--face">
+          <span class="chip"><svg viewBox="0 0 24 24"><path d="M4 8V6a2 2 0 0 1 2-2h2M16 4h2a2 2 0 0 1 2 2v2M20 16v2a2 2 0 0 1-2 2h-2M8 20H6a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="11" r="3"/><path d="M7.5 17a5 5 0 0 1 9 0"/></svg></span>
+          <div><strong>Reconhecimento facial</strong><small>5 rostos identificados</small></div>
+        </div>
+        <div class="float-card float-card--ok">
+          <span class="dot dot--green"></span>
+          <div><strong>Chamada concluída</strong><small>em 3 segundos</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STATS ============ -->
+  <section class="stats">
+    <div class="container stats__grid">
+      <div class="stat"><strong>1 ou + fotos</strong><span>combinadas em uma só chamada</span></div>
+      <div class="stat"><strong>3 métodos</strong><span>facial, GPS e manual</span></div>
+      <div class="stat"><strong>512</strong><span>dimensões por assinatura facial</span></div>
+      <div class="stat"><strong>3 perfis</strong><span>aluno, professor e administrador</span></div>
+    </div>
+  </section>
+
+  <!-- ============ HOW IT WORKS ============ -->
+  <section class="section" id="como-funciona">
+    <div class="container">
+      <div class="section__head">
+        <span class="eyebrow">Como funciona</span>
+        <h2>Do cadastro à presença registrada</h2>
+        <p>Quatro passos, e a maior parte deles acontece sozinha.</p>
+      </div>
+      <ol class="steps">
+        <li class="step reveal">
+          <span class="step__num">01</span>
+          <h3>Turma configurada</h3>
+          <p>O professor cria a turma, importa os alunos por planilha (Excel ou CSV) e define o limite de faltas e os métodos de presença permitidos.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step__num">02</span>
+          <h3>Rosto cadastrado</h3>
+          <p>Cada aluno envia uma foto. O sistema detecta o rosto e gera uma assinatura facial única, guardada com segurança.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step__num">03</span>
+          <h3>Sessão aberta</h3>
+          <p>As aulas são agendadas e abertas automaticamente no horário. O professor tira uma ou mais fotos da sala, os alunos marcam presença pelo GPS ou o professor registra manualmente.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step__num">04</span>
+          <h3>Presença registrada</h3>
+          <p>Os rostos reconhecidos recebem presença na hora. A sessão fecha sozinha ao fim do prazo e o histórico fica disponível para consulta.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ FEATURES ============ -->
+  <section class="section section--alt" id="recursos">
+    <div class="container">
+      <div class="section__head">
+        <span class="eyebrow">Recursos</span>
+        <h2>Tudo o que a frequência precisa</h2>
+      </div>
+      <div class="features">
+        <article class="feature reveal">
+          <div class="feature__icon"><svg viewBox="0 0 24 24"><path d="M4 8V6a2 2 0 0 1 2-2h2M16 4h2a2 2 0 0 1 2 2v2M20 16v2a2 2 0 0 1-2 2h-2M8 20H6a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="11" r="3"/><path d="M7.5 17a5 5 0 0 1 9 0"/></svg></div>
+          <h3>Reconhecimento facial</h3>
+          <p>Uma ou mais fotos da sala identificam os alunos presentes — ideal para turmas grandes. As fotos podem vir da câmera ou da galeria.</p>
+        </article>
+        <article class="feature reveal">
+          <div class="feature__icon"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></div>
+          <h3>Presença por GPS</h3>
+          <p>O aluno confirma presença pelo celular, e o sistema valida se ele está dentro do raio definido para a sala de aula.</p>
+        </article>
+        <article class="feature reveal">
+          <div class="feature__icon"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/><path d="m9 15 2 2 4-4"/></svg></div>
+          <h3>Sessões automáticas</h3>
+          <p>As aulas abrem e fecham sozinhas no horário agendado, sem o professor precisar lembrar de nada.</p>
+        </article>
+        <article class="feature reveal">
+          <div class="feature__icon"><svg viewBox="0 0 24 24"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg></div>
+          <h3>Controle de faltas</h3>
+          <p>Limite de faltas e faixa de alerta configuráveis por turma, com histórico de cada alteração feita na frequência.</p>
+        </article>
+        <article class="feature reveal">
+          <div class="feature__icon"><svg viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></div>
+          <h3>Justificativas</h3>
+          <p>O aluno envia atestados e documentos pelo app; o professor analisa cada justificativa em um só lugar.</p>
+        </article>
+        <article class="feature reveal">
+          <div class="feature__icon"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></div>
+          <h3>Relatórios</h3>
+          <p>Relatório por turma com faltas, faltas justificadas e o limite de cada aluno, pronto para o fechamento do semestre.</p>
+        </article>
+        <article class="feature reveal">
+          <div class="feature__icon"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/></svg></div>
+          <h3>Multi-instituição</h3>
+          <p>Cada instituição enxerga apenas os próprios dados, com isolamento garantido na camada de banco de dados.</p>
+        </article>
+        <article class="feature reveal">
+          <div class="feature__icon"><svg viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15.5" r="1.5"/></svg></div>
+          <h3>Segurança</h3>
+          <p>Autenticação com tokens JWT, primeiro acesso por código enviado por e-mail e bloqueio de tela com biometria do dispositivo.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ROLES ============ -->
+  <section class="section" id="perfis">
+    <div class="container">
+      <div class="section__head">
+        <span class="eyebrow">Perfis</span>
+        <h2>Uma experiência para cada papel</h2>
+      </div>
+      <div class="roles">
+        <article class="role reveal">
+          <header><span class="role__tag">Aluno</span></header>
+          <ul>
+            <li>Cadastra o rosto uma única vez</li>
+            <li>Marca presença pelo GPS</li>
+            <li>Recebe código de primeiro acesso por e-mail</li>
+            <li>Envia justificativas com anexos</li>
+          </ul>
+        </article>
+        <article class="role role--featured reveal">
+          <header><span class="role__tag">Professor</span></header>
+          <ul>
+            <li>Cria turmas e importa alunos por planilha</li>
+            <li>Agenda sessões com local e raio de presença</li>
+            <li>Faz a chamada com uma ou mais fotos da sala</li>
+            <li>Corrige presenças e avalia justificativas</li>
+            <li>Gera relatórios de frequência</li>
+          </ul>
+        </article>
+        <article class="role reveal">
+          <header><span class="role__tag">Administrador</span></header>
+          <ul>
+            <li>Gerencia os usuários da instituição</li>
+            <li>Importa cadastros em lote</li>
+            <li>Consulta relatórios de todas as turmas</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section section--alt" id="contato">
+    <div class="container contact">
+      <div class="contact__intro reveal">
+        <span class="eyebrow">Contato</span>
+        <h2>Fale com a equipe</h2>
+        <p>Quer saber mais sobre o Panopticon, levar o sistema para sua instituição ou contribuir com o projeto? Entre em contato.</p>
+
+        <div class="contact__card">
+          <span class="chip"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/></svg></span>
+          <div><small>Departamento</small><strong>DCOMP · Universidade Federal de Sergipe</strong><span>São Cristóvão – SE</span></div>
+        </div>
+      </div>
+
+      <div class="contact__team reveal">
+        <h3>Equipe</h3>
+        <p class="contact__hint">Clique em um integrante para enviar um e-mail.</p>
+        <ul class="team">
+          <li><a class="member" href="mailto:thiagomvas@gmail.com"><span class="avatar">TV</span><strong>Thiago Vasconcelos</strong><small>thiagomvas<wbr>@gmail.com</small></a></li>
+          <li><a class="member" href="mailto:raphaelmsgoncalves@gmail.com"><span class="avatar">RM</span><strong>Raphael Matos</strong><small>raphaelmsgoncalves<wbr>@gmail.com</small></a></li>
+          <li><a class="member" href="mailto:renvy.sampaio@gmail.com"><span class="avatar">R</span><strong>Renan</strong><small>renvy.sampaio<wbr>@gmail.com</small></a></li>
+          <li><a class="member" href="mailto:irwingfelipe@gmail.com"><span class="avatar">IV</span><strong>Irwing Vieira</strong><small>irwingfelipe<wbr>@gmail.com</small></a></li>
+          <li><a class="member" href="mailto:guinacio132000@gmail.com"><span class="avatar">GI</span><strong>Guilherme Inacio</strong><small>guinacio132000<wbr>@gmail.com</small></a></li>
+          <li><a class="member" href="mailto:wytherbr@hotmail.com"><span class="avatar">CG</span><strong>Caiuã Gomes</strong><small>wytherbr<wbr>@hotmail.com</small></a></li>
+          <li><a class="member" href="mailto:gabriela.safira.n@gmail.com"><span class="avatar">G</span><strong>Gabriela</strong><small>gabriela.safira.n<wbr>@gmail.com</small></a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="cta">
+    <div class="container cta__inner reveal">
+      <img src="assets/icon.png" alt="" class="cta__icon">
+      <h2>Menos tempo fazendo chamada.<br>Mais tempo de aula.</h2>
+      <a href="https://github.com/DCOMP-UFS/praticas.reconhece-face" class="btn btn--primary" target="_blank" rel="noopener">Conheça o projeto</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <img src="assets/logoBlack.png" alt="Panopticon" class="footer__logo">
+      <p>Projeto desenvolvido no Departamento de Computação · Universidade Federal de Sergipe</p>
+    </div>
+  </footer>
+
+  <script src="script.js?v=2"></script>
+</body>
+</html>
